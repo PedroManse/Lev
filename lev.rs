@@ -10,10 +10,9 @@ pub fn lev(s0: &str, s1: &str) -> usize {
     let len_1 = s1_chars.len();
     let mut row: Vec<usize> = (0..=len_1).collect();
     let mut d0 = 0;
-    let mut e;
 
     for (i, s0_char) in s0.chars().enumerate() {
-        e = i + 1;
+        let mut e = i + 1;
 
         for j in 0..len_1 {
             let c: usize = (s0_char != s1_chars[j]) as usize;
