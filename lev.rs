@@ -7,11 +7,9 @@ pub fn lev(s0: &str, s1: &str) -> usize {
     let s1_chars: Vec<char> = s1.chars().collect();
 
     // get lengths of string 1
-    let len_1: usize = s1_chars.len();
-
+    let len_1 = s1_chars.len();
     let mut row: Vec<usize> = (0..=len_1).collect();
-
-    let mut d0: usize = 0;
+    let mut d0 = 0;
     let mut e;
 
     for (i, s0_char) in s0.chars().enumerate() {
